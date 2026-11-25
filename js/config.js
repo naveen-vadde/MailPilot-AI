@@ -9,5 +9,5 @@ export const CONFIG = {
   // gmail.modify = read mail + archive / trash / star / mark read. It cannot send mail or permanently delete.
   SCOPES: "https://www.googleapis.com/auth/gmail.modify",
   // Only this Google account may connect. Set to "" to allow any account.
-  ALLOWED_EMAIL: "vaddenaveen77@gmail.com"
+  ALLOWED_EMAIL: ""
 };

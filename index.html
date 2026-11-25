@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MailPilot – AI Inbox Manager</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="MailPilot home"><span id="logo"></span><span><b>MailPilot</b><small>AI Inbox Manager</small></span></a>
+      <nav class="nav" id="nav" aria-label="Mailboxes"></nav>
+      <div class="smart-card">
+        <b>Smart Organize <span id="spark1"></span></b>
+        <p>Your emails are automatically categorized with AI power.</p>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="icon-btn only-small" id="menuBtn" aria-label="Open menu"></button>
+        <label class="search"><span id="searchIcon"></span>
+          <input id="search" type="search" placeholder="Search emails... (e.g. HCL, interview, invoice)" autocomplete="off" />
+        </label>
+        <button class="status" id="status" type="button"></button>
+        <button class="icon-btn" id="refresh" aria-label="Refresh inbox" title="Sync now"></button>
+        <button class="icon-btn" id="theme" aria-label="Toggle dark mode" title="Dark mode"></button>
+        <button class="avatar" id="avatar" aria-label="Account menu">N</button>
+      </header>
+
+      <section class="stats" id="stats" aria-label="Inbox summary"></section>
+
+      <section class="workspace" id="workspace">
+        <div class="panel list-panel">
+          <div class="tabs" id="tabs" role="tablist"></div>
+          <div class="list-head" id="listHead"></div>
+          <div class="list" id="list" aria-live="polite"></div>
+        </div>
+        <div class="panel detail-panel" id="detail"></div>
+      </section>
+
+      <section class="settings" id="settings" hidden></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

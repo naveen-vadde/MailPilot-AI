@@ -1,0 +1,8 @@
+{
+  "name": "mailpilot-ai",
+  "version": "2.0.0",
+  "description": "MailPilot AI – Gmail dashboard with automatic email categorization",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=16" },
+  "license": "MIT"
+}
